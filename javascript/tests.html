@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Tests</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="inputColor"
+      onfocus="changeBackground()"
+      onblur="receiveValue()"
+    />
+    <div id="container"></div>
+    <script>
+      let myInput = document.getElementById("inputColor");
+
+      function changeBackground() {
+        myInput.style.backgroundColor = "yellow";
+      }
+
+      function receiveValue() {
+        let value = myInput.value;
+        value.length < 3
+          ? (myInput.style.backgroundColor = "red")
+          : (myInput.style.backgroundColor = "green");
+
+        document.getElementById("container").innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

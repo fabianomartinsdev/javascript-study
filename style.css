@@ -1,0 +1,14 @@
+.container {
+  background-color: #ccc;
+  height: 600px;
+  display: flex;
+}
+
+.item {
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  flex-basis: auto;
+}

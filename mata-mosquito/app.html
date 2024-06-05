@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="game.js"></script>
+    <title>Mata-Mosquito</title>
+  </head>
+  <body onresize="adjustSize()">
+    <div class="panel">
+      <div class="hp">
+        <img id="hp1" src="images/coracao_cheio.png" />
+        <img id="hp2" src="images/coracao_cheio.png" />
+        <img id="hp3" src="images/coracao_cheio.png" />
+      </div>
+      <div class="timer">Tempo restante: ?</div>
+    </div>
+    <script>
+      setInterval(randomPosition, 1000);
+    </script>
+  </body>
+</html>

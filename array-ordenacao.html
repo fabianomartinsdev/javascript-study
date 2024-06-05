@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenação em Javascript</title>
+  </head>
+  <body>
+    <main>
+      <input type="text" id="ipt" />
+      <button type="submit" id="addBtn">Adicionar</button>
+      <button id="orderBtn">Ordenar</button>
+    </main>
+
+    <script>
+      var objetos = Array("cadeira", "impressora", "garfo");
+
+      document
+        .getElementById("addBtn")
+        .addEventListener("click", function addValue() {
+          let value = document.getElementById("ipt").value;
+
+          if (value === "") {
+            alert("Informe um valor valido");
+          } else if (objetos.find((element) => element === value)) {
+            alert("Valor repetido, informe outro");
+          } else {
+            objetos.push(value);
+            console.log(objetos);
+            value = "";
+          }
+        });
+
+      document
+        .getElementById("orderBtn")
+        .addEventListener("click", function order() {
+          objetos.sort();
+          console.log(objetos);
+        });
+    </script>
+  </body>
+</html>

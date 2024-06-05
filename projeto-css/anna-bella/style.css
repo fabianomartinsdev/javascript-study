@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  font-family: "Arial";
+}
+
+body {
+  background-image: url(images/fundo.png);
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  background: #d3d3bb;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #4b566a;
+  font-weight: bold;
+}
+
+.main-container {
+  background: #e8e8d9;
+  padding: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4f535e;
+}
+
+.footer-container {
+  padding: 20px;
+  text-align: center;
+  background: #d3d3bb;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  border: 10px solid #d3d3bb;
+  width: 600px;
+  margin-top: 20px;
+}
+
+.paragraph {
+  margin-top: 20px;
+}

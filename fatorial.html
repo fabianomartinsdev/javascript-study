@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatorial</title>
+  </head>
+  <body>
+    <p>Digite um numero para descobrir seu fatorial</p>
+    <input type="text" id="ipt" />
+    <button onclick="sendNumber()" id="btn">Enviar</button>
+    <br />
+    <span id="text"></span>
+
+    <script>
+      function sendNumber() {
+        let number = document.getElementById("ipt").value;
+        fatorial = 1;
+
+        for (i = 1; i <= number; i++) {
+          fatorial *= i;
+        }
+
+        document.getElementById(
+          "text"
+        ).innerHTML = `O fatorial de ${number} é igual a ${fatorial}`;
+      }
+    </script>
+  </body>
+</html>

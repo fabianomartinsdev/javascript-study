@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Média de Idades</title>
+  </head>
+  <body>
+    <p>Insira uma idade</p>
+    <input type="text" id="ipt" />
+    <button onclick="sendAge()">Enviar</button>
+    <br />
+    <span id="text"></span>
+
+    <script>
+      let idades = [15, 46, 75, 34, 23];
+      let total = 0;
+
+      function sendAge() {
+        let newAge = document.getElementById("ipt").value;
+        idades.push(Number(newAge));
+        for (let i = 0; i < idades.length; i++) {
+          total += idades[i];
+          console.log(total);
+        }
+        let media = total / idades.length;
+        document.getElementById(
+          "text"
+        ).innerHTML = `A média de idades do nosso bando é de ${media}`;
+      }
+    </script>
+  </body>
+</html>
